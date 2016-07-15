@@ -45,15 +45,14 @@ def getKey():
             print("Error. I didn't quite get that.")
             getKey()
        
-#Method to take input and get the mode (decrypt/encrypt).
+#Method to take input.
 def getMessage():
     global message
     message = input("Enter the message. ").upper()
-    return message #.replace(" ", "")
-
+    return message
+    
 #This is the function for encrypting or decrypting.
 def caesarCipher(message, oddKey, evenKey):
-    index = 0
     translated = ""     #Empty string to store new message.
     
     #Loops until the program evaluates all the chracters of the message.
@@ -67,23 +66,23 @@ def caesarCipher(message, oddKey, evenKey):
                 useKey = evenKey
             else:
                 useKey = oddKey
-                
             num += useKey
+            
+            #Wrap-around; keeps num within the ASCII range of letters.
             if num > 90: 
                 extra = num - 90
                 num = 65 + extra
             elif num < 65: 
                 extra = 65 - num
-                num = 90 - extra 
+                num = 90 - extra
         translated += chr(num)
-    #translated.replace(";", " ")
     print("The message is now:", translated  + ".")
 
 #Sets mode of program to encrypt or decrypt.
 def setMode():
     global evenKey
     global oddKey
-    mode = input("Do you want to encrypt or decrypt this? Enter 'e' or 'd'? ")
+    mode = input("Do you want to encrypt or decrypt this? Enter 'e' or 'd': ")
     
     if mode == "e":
         #Nothing needs to be done to the keys for encyrption.
@@ -98,14 +97,13 @@ def setMode():
     #Error message. In the event that the user mistypes, the program asks again.
     else:
         print("I'm sorry, I didn't quite get that.")
-        mode = input("Do you want to encrypt or decrypt this? Enter 'e' or 'd'? ")
-        print (mode)
+        setMode()
 
 #Keeps program running by calling other methods until user terminates.      
 def startProgram():
     while True:
         print("")
-        init = input("Hit 'y' to start the program and 'n' if you want to exit. ")
+        init = input("Hit 'y' to start the program and 'n' if you want to exit: ")
         #Allows program to be run again from the shell.
         if init == "y":
             resetKey()
