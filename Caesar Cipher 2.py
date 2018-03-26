@@ -1,6 +1,3 @@
-#Author: Gloria Ngan
-#GN Caesar Cipher 2.py
-
 #Note: This program was originally written in Python 2.3, some functionality may be lost.
 
 # This is a program designed to recieve input then encrypt it with two
