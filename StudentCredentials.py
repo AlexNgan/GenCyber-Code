@@ -1,4 +1,4 @@
-#Author: Gloria 
+
 from datetime import datetime
 
 def studentType():
