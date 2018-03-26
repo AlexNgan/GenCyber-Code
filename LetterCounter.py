@@ -1,5 +1,3 @@
-#Author: Gloria
-
 def letterCount():
     word = input("Enter a word: ")
     letter = input("Enter a letter which you would like me to count the occurrences of: ")
