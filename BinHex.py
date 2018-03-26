@@ -1,6 +1,4 @@
 #BinHex.py
-#Author: Gloria Ngan
-    
 #Converts ASCII to hex.
 def ASCIIToHex(letter):
     letterA = ord("A")
