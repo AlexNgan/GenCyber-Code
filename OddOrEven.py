@@ -1,5 +1,4 @@
-#OddOrEven.py
-#Author: Gloria  
+#Identifies an integer number as odd or even.
 
 def OddOrEven(num):
     rem = num % 2
