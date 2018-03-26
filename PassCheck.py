@@ -1,4 +1,5 @@
-#Author: Gloria
+#Determines if a passcode is valid. 
+
 isLength 
 isCapital 
 
