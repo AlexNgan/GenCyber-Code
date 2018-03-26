@@ -1,4 +1,3 @@
-#Author: Gloria
 
 def guessAnimal():
     #print("Press 'q' at any time to quit.")
